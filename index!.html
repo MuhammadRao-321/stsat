@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JS Class</h2>
+    <h2>JS Class Inheritance</h2>
+    <p id="student1"></p>
+    <p id="student2"></p>
+    <p id="student3"></p>
+    <p id="details"></p>
+    <p id="hello"></p>
+    <p id="hi"></p>
+    <p id="welcome"></p>
+    <script>
+        class student {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+            age(){
+                let date = new Date();
+                return date.getFullYear() - this.year;
+            }
+        }
+        student1 = new student("Ali", 2014);
+        document.getElementById("student1").innerHTML = "My name is " + student1.name + ".I born in " + student1.year + ". And my age is " + student1.age();
+        student2 = new student("Ahmad", 2013);
+        document.getElementById("student2").innerHTML = "My name is " + student2.name + ".I born in " + student2.year + ". And my age is " + student2.age();
+        student3 = new student("Anny", 2012);
+        document.getElementById("student3").innerHTML = "My name is " + student3.name + ".I born in " + student3.year + ". And my age is " + student3.age();
+ class Car {
+    constructor(brand) {
+        this.carname = brand;
+    }
+    present() {
+        return 'I have a ' + this.carname
+;    }
+ }
+ class Model extends Car {
+    constructor(brand, mod) {
+        super(brand);
+        this.model = mod;
+    }
+    show() {
+        return this.present() + ', it is a ' + this.model;
+    }
+ }
+ let myCar = new Model("Toyota", "LC300") 
+ document.getElementById("details").innerHTML = myCar.show()
+ class Student {
+            constructor(name) {
+                this.studentname = name;
+            }
+            static hello() {
+                return "Hello!!" ;
+            }
+            static Welcome(x) {
+                return "Welcome" + x.studentname;
+            }
+            hi() {
+                return "Hi " + this.studentname;
+            }
+        }
+    let myname = new Student("Ali")
+        document.getElementById("hello").innerHTML=Student.hello()
+ </script>
+</body>
+</html>
